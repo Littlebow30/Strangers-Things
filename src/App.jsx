@@ -1,13 +1,13 @@
 import './App.css'
-import ViewPosts from './helper/ViewPosts'
+import ViewPosts from './helper/jsx/ViewPosts';
+import HomePage from './helper/jsx/HomePage';
 
 function App() {
   
 
   return (
     <>
-    <h1>Hello</h1>
-     <ViewPosts />
+      <ViewPosts />
     </>
   )
 }

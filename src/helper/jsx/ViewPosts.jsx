@@ -9,10 +9,10 @@ export default  function ViewPosts () {
             const info = await fetchPost()
             const posts = info.data.posts
             setGetPosts(posts) 
-
+            console.log(posts)
         }
         waitPosts()
-    })
+    },[])
 
 
     const fetchPost = async () => {
@@ -30,15 +30,14 @@ export default  function ViewPosts () {
 
     return (
         <ul>
-            {posts.map((postItems) => {
+            {getPosts.map((postItems) => {
                 return (
-                    <div key={id}>
+                    <div key={postItems._id}>
                         <h2>{postItems.title}</h2>
                         <h3>{postItems.location}</h3>
                     </div>
                 )
             })}
-    
         </ul>
     )
 
